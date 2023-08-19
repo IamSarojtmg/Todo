@@ -1,16 +1,18 @@
 import "./style.css";
-import background from "./background.jpg";
+import logo from './logo.png'
 import printMe from "./print.js";
 
-
-const btn = document.createElement('button')
-const div = document.querySelector('.addhere')
-
-
-btn.textContent = 'kiro'
-
-div.appendChild(btn)
-console.log(div);
+// adding logo
+const sidePanel = document.querySelector('aside')
+const logoCont = document.createElement('img')
+sidePanel.appendChild(logoCont)
+logoCont.src = logo
+logoCont.classList = 'logo'
 
 
-btn.addEventListener('click', printMe)
+
+
+
+
+
+
