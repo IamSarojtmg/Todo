@@ -64,6 +64,10 @@ main {
 
 }
 
+h1{
+  padding-left: 4%;
+}
+
 .add-task {
   height: 10%;
   width: 100%;
@@ -81,8 +85,15 @@ main {
   padding-left: 10px;
 }
 
-.add-task>p:hover{
+.add-task>p:hover {
   background-color: rgb(43, 35, 35);
 }
 
-/* working on hover. */
+.modal-cont{
+  background-color: white;
+  height: 100px;
+  width: 30%;
+  position: absolute;
+  top: 250px;
+  right: 15%;
+}

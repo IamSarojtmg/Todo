@@ -1,6 +1,6 @@
 import "./style.css";
 import logo from './logo.png'
-import printMe from "./print.js";
+import addTask from "./print.js";
 
 // adding logo
 const sidePanel = document.querySelector('aside')
@@ -9,6 +9,7 @@ sidePanel.appendChild(logoCont)
 logoCont.src = logo
 logoCont.classList = 'logo'
 
+addTask()
 
 
 
