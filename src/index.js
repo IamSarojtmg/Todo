@@ -9,6 +9,8 @@ sidePanel.appendChild(logoCont)
 logoCont.src = logo
 logoCont.classList = 'logo'
 
+
+
 addTask()
 
 

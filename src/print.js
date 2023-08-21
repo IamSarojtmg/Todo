@@ -1,3 +1,12 @@
+import addNewTask from "./newTask";
+
+function ToooDo(task,date){
+  return{
+    task,date
+  }
+}
+
+
 export default function addTask() {
   const addTask = document.querySelector(".action-add");
 
@@ -7,7 +16,7 @@ export default function addTask() {
     const description = document.createElement("input");
     const form = document.createElement("form");
     const date = document.createElement("input");
-    const submit = document.createElement("button");
+    const submit = document.createElement("input");
 
     main.appendChild(section);
     section.classList = "modal-cont";
@@ -20,5 +29,16 @@ export default function addTask() {
     form.appendChild(submit);
     submit.type = "submit";
     submit.textContent = "Submit";
+    submit.value = "Submit";
+
+    submit.addEventListener('click',(e)=>{
+      e.preventDefault()
+      const newTask = ToooDo(
+        description.value,
+        date.value
+      )
+      main.removeChild(section)
+      addNewTask()
+    })
   });
 }
