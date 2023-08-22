@@ -1,4 +1,5 @@
 import addNewTask from "./newTask";
+import cancle from "../cancel";
 
 function ToooDo(task, date) {
   return {
@@ -20,6 +21,7 @@ export default function addTask() {
     const date = document.createElement("input");
     const submit = document.createElement("input");
 
+    
     main.appendChild(section);
     section.classList = "modal-cont";
     section.appendChild(form);
@@ -33,6 +35,49 @@ export default function addTask() {
     submit.textContent = "Submit";
     submit.value = "Submit";
 
+
+
+
+
+
+
+
+
+
+
+
+cancle(section, main )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     submit.addEventListener("click", (e) => {
       e.preventDefault();
 
@@ -40,8 +85,7 @@ export default function addTask() {
 
       toDoArr.push(newTask);
 
-      console.log(toDoArr[0].date);
-      addNewTask(toDoArr[0].task, toDoArr[0].date);
+      addNewTask(toDoArr[0].task, toDoArr[0].date); // the arguments being passed on to the addnewtask which is in another file(module)
       toDoArr = []
       main.removeChild(section);
     });
