@@ -1,12 +1,18 @@
-export default function addNewTask (){
-  const main = document.querySelector("main");
+export default function addNewTask (description, date){
+  const main = document.querySelector(".main-body");
   const task = document.createElement('p')
+  const addDate = document.createElement('span')
   main.appendChild(task)
+  main.appendChild(addDate)
 
-  console.log(task);
-  task.textContent = 'Hi'
+  task.textContent = description
+  task.style.color = 'white'
+
+  addDate.textContent = date
+  addDate.style.color = 'white'
 
 }
 
 
-// how to position the newly added elements such as task appear at the top of the main element
+
+

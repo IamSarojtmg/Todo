@@ -1,11 +1,13 @@
 import addNewTask from "./newTask";
 
-function ToooDo(task,date){
-  return{
-    task,date
-  }
+function ToooDo(task, date) {
+  return {
+    task,
+    date,
+  };
 }
 
+let toDoArr = [];
 
 export default function addTask() {
   const addTask = document.querySelector(".action-add");
@@ -31,14 +33,17 @@ export default function addTask() {
     submit.textContent = "Submit";
     submit.value = "Submit";
 
-    submit.addEventListener('click',(e)=>{
-      e.preventDefault()
-      const newTask = ToooDo(
-        description.value,
-        date.value
-      )
-      main.removeChild(section)
-      addNewTask()
-    })
+    submit.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      const newTask = ToooDo(description.value, date.value);
+
+      toDoArr.push(newTask);
+
+      console.log(toDoArr[0].date);
+      addNewTask(toDoArr[0].task, toDoArr[0].date);
+      toDoArr = []
+      main.removeChild(section);
+    });
   });
 }
