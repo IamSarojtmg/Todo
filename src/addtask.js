@@ -10,6 +10,7 @@ export default function addTask() {
     const description = document.createElement("input");
     const form = document.createElement("form");
     const date = document.createElement("input");
+    const important = document.createElement
 
     main.appendChild(section);
     section.classList = "modal-cont";
