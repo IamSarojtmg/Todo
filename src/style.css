@@ -29,6 +29,12 @@ aside {
   height: 100%;
 }
 
+.done-button{
+  width: 10px;
+  height: 10px;
+  border: solid white;
+}
+
 
 
 
@@ -64,7 +70,7 @@ main {
 
 }
 
-h1{
+h1 {
   padding-left: 4%;
 }
 
@@ -89,7 +95,7 @@ h1{
   background-color: rgb(43, 35, 35);
 }
 
-.modal-cont{
+.modal-cont {
   background-color: white;
   height: 100px;
   width: 30%;

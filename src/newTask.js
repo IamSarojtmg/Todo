@@ -1,18 +1,28 @@
-export default function addNewTask (description, date){
+export default function addNewTask(description, date) {
   const main = document.querySelector(".main-body");
-  const task = document.createElement('p')
-  const addDate = document.createElement('span')
-  main.appendChild(task)
-  main.appendChild(addDate)
+  const task = document.createElement("p");
+  const addDate = document.createElement("span");
+  const done = document.createElement("div");
 
-  task.textContent = description
-  task.style.color = 'white'
+  main.appendChild(task);
+  main.appendChild(addDate);
+  main.appendChild(done);
 
-  addDate.textContent = date
-  addDate.style.color = 'white'
+  task.textContent = description;
+  task.style.color = "white";
 
+  addDate.textContent = date;
+  addDate.style.color = "white";
+
+  done.classList = "done-button";
+
+  done.addEventListener("click", () => {
+    main.removeChild(task);
+    main.removeChild(addDate);
+    main.removeChild(done);
+  });
+
+if(task.textContent === '' && addDate.textContent === ''){
+  main.removeChild(done)
 }
-
-
-
-
+}
