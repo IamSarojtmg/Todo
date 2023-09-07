@@ -7,7 +7,7 @@ function ToDo(task, date) {
   };
 }
 
-let toDoArr = [];
+// let toDoArr = [];
 
 export default function submit(form, main, section, description, date) {
   const submit = document.createElement("input");
@@ -21,13 +21,19 @@ export default function submit(form, main, section, description, date) {
 
     const newTask = ToDo(description.value, date.value);
 
-    toDoArr.push(newTask);
+    // let newTaskToString = JSON.stringify(newTask);
 
-    addNewTask(toDoArr[0].task, toDoArr[0].date); // the arguments being passed on to the addnewtask which is in another file(module)
+    // const newTasktoObj = localStorage.setItem("local", newTaskToString);
+    // console.log(newTasktoObj);
 
-    toDoArr = [];
+    // const newTasktoObj = JSON.parse(localStorage.getItem("local"));
+
+    // toDoArr.push(newTasktoObj);
+
+    addNewTask(newTask.task, newTask.date); // the arguments being passed on to the addnewtask which is in another file(module)
+
+    // toDoArr = [];
 
     main.removeChild(section);
   });
-
 }

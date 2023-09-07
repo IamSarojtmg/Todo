@@ -10,3 +10,4 @@ logoCont.src = logo;
 logoCont.classList = "logo";
 
 addTask();
+
